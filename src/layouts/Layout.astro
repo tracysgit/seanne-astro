@@ -20,6 +20,30 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <header>
+      <h1 class="h1-headline">
+        <a href="/work"
+          ><span class="visually-hidden">Artwork by</span>Seanne Buoy</a>
+      </h1>
+      <nav class="mainnav" aria-label="Main Menu">
+        <input class="mainmenu-btn" type="checkbox" id="mainmenu-btn" />
+        <label class="mainmenu-icon" html-for="mainmenu-btn" tabindex="0"
+          ><span class="navicon"></span></label
+        >
+        <ul class="mainmenu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/about">About</a></li>
+          <li>
+            <a
+              href="mailto:contact@seannebuoy.art?subject=Contact%20Seanne%20Buoy"
+              >Contact</a>
+          </li>
+          {/* <li><a href="/features">Features</a></li> */}
+          <!-- <li><LinkContactUs social={SOCIAL} text={"Contact"} /></li>  -->
+        </ul>
+      </nav>
+    </header>
     <slot />
   </body>
 </html>
