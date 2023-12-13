@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import pieces from './../assets/data/pieces.json';
+
+const pageName = 'work';
+---
+
+<BaseLayout
+  title="Seanne Buoy | Work"
+  description="View the body of work by artist Seanne Buoy."
+>
+  <main>
+    <section aria-label="Portfolio of Artwork">
+      {
+        pieces.length ? (
+          <ul class="image-container--columns">
+            {pieces.map((piece) => {
+              if (piece.isActive) {
+                return (
+                  <li id={`piece_${piece.id}`}>
+                    <a href={`/work/${piece.id}`} class="image-card">
+                      <figure>
+                        <img
+                          src={`../images/${piece.imageFiles.card}.jpg`}
+                          alt=""
+                        />
+                        <figcaption>{piece.name}</figcaption>
+                      </figure>
+                    </a>
+                  </li>
+                );
+              }
+            })}
+          </ul>
+        ) : (
+          <p class="message--error">No artwork is available for display.</p>
+        )
+      }
+    </section>
+  </main>
+</BaseLayout>

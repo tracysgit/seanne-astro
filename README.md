@@ -45,5 +45,6 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 - "npm create astro@latest" and cd to folder
 - "npm run dev" 
+- "astro preferences disable devToolbar"
 
 ## Build Notes 

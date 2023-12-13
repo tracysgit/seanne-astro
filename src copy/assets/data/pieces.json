@@ -1,15 +1,4 @@
-{
-  "SOCIAL": {
-    "email": {
-      "address": "contact@seannebuoy.art",
-      "subject": "Contact%20Seanne%20Buoy"
-    },
-    "instagram": {
-      "handle": "@milk.a.neuron",
-      "link": "https://www.instagram.com/milk.a.neuron/?hl=en"
-    }
-  },
-  "PIECES": [
+  [
     {
       "isActive": true,
       "id": 35,
@@ -30,7 +19,7 @@
       "isActive": true,
       "id": 34,
       "name": "The Milk of Human Kindness",
-      "medium": "Woodblock print",
+      "medium": "Woodblock Print",
       "height": "8.5",
       "width": "11.5",
       "sizeUnits": "inches",
@@ -46,7 +35,7 @@
       "isActive": true,
       "id": 33,
       "name": "Honey, We Shook Him Too Hard",
-      "medium": "Woodblock print",
+      "medium": "Woodblock Print",
       "height": "8.5",
       "width": "11.5",
       "sizeUnits": "inches",
@@ -62,7 +51,7 @@
       "isActive": true,
       "id": 32,
       "name": "Suburban Home",
-      "medium": "Woodblock print",
+      "medium": "Woodblock Print",
       "height": "8.5",
       "width": "11.5",
       "sizeUnits": "inches",
@@ -461,4 +450,3 @@
         }
     }
   ]
-}

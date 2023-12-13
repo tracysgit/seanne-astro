@@ -1,29 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const imageAbout = 'the-milk-of-human-kindness_crop';
-
 const pageName = 'about';
-const title = 'Seanne Buoy | About';
-const metaDesc =
-  'Learn about artist Seanne Buoy and kinesthetic synesthesia in her art.';
 ---
 
-<BaseLayout title={title} description={metaDesc}>
+<BaseLayout
+  title="Seanne Buoy | About"
+  description="Learn about artist Seanne Buoy and kinesthetic synesthesia in her art."
+>
   <section aria-labelledby="headline--about">
     <figure class="image-container--marquee">
-      <!-- <img
+      <img
         src="./images/the-milk-of-human-kindness_crop.jpg"
         alt="Art piece called The Milk of Human Kindness"
-      /> -->
-      <picture>
-        <source
-          src-set={`./../images/${imageAbout}.webp`}
-          alt=""
-          type="image/webp"
-        />
-        <img src={`./../images/${imageAbout}.jpg`} alt="" />
-      </picture>
+      />
       <!-- <figcaption>Bleached Black Fabric, 2023</figcaption> -->
     </figure>
     <h2 id="headline--about">About the Artist</h2>

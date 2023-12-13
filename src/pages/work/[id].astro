@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import pieces from '../../assets/data/pieces.json';
+
+export function getStaticPaths() {
+  return pieces.map(
+    ({
+      id,
+      isActive,
+      name,
+      medium,
+      height,
+      width,
+      depth,
+      sizeUnits,
+      yearCreated,
+      description,
+      imageFiles,
+    }) => {
+      return {
+        params: { id },
+        props: {
+          isActive,
+          name,
+          medium,
+          height,
+          width,
+          depth,
+          sizeUnits,
+          yearCreated,
+          description,
+          imageFiles,
+        },
+      };
+    }
+  );
+}
+
+const { id } = Astro.params;
+const {
+  isActive,
+  name,
+  medium,
+  height,
+  width,
+  depth,
+  sizeUnits,
+  yearCreated,
+  description,
+  imageFiles,
+} = Astro.props;
+
+const title = `Seanne Buoy | ${name}`;
+const metaDesc = `Learn more about the artwork called '${name}'.`;
+---
+
+<BaseLayout title={title} description={metaDesc}>
+  <section aria-labelledby="headline--piece">
+    {
+      isActive ? (
+        <div id={`piece-${id}`}>
+          <div class="headline--piece-wrapper">
+            <h2 id="headline--piece">
+              <Fragment set:html={name} />
+              {yearCreated && `(${yearCreated})`}
+            </h2>
+            <a href="/work/" class="button--back">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                class="icon--arrow-left"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 25 25"
+              >
+                <path d="M7 12.5 17.293 2l.707.707L8.414 12.5 18 22.293l-.707.707L7 12.5z" />
+              </svg>
+              &#xfeff;Back <span class="visually-hidden">to the Work page</span>
+            </a>
+          </div>
+          {imageFiles.card && (
+            <figure class="image-container--single">
+              <picture>
+                <source
+                  src-set={`../images/${imageFiles.card}.webp`}
+                  alt=""
+                  type="image/webp"
+                />
+                <img src={`../images/${imageFiles.card}.jpg`} alt="" />
+              </picture>
+              {imageFiles.other &&
+                imageFiles.other.map((image, index) => (
+                  <picture>
+                    <source
+                      src-set={`../images/${image}.webp`}
+                      alt=""
+                      type="image/webp"
+                      style={{ marginTop: '10px' }}
+                    />
+                    <img
+                      src={`../images/${image}.jpg`}
+                      alt=""
+                      style={{ marginTop: '10px' }}
+                    />
+                  </picture>
+                ))}
+              {/*<figcaption>
+                {medium}, {height} x {width}
+                {depth && ` x ${depth}`} {sizeUnits}
+              </figcaption>*/}
+              <figcaption>
+                {medium}, {height} x {width} {depth && ` x ${depth}`}{' '}
+                {sizeUnits}
+              </figcaption>
+            </figure>
+          )}
+          <div>
+            <Fragment set:html={description} />
+          </div>
+        </div>
+      ) : (
+        <p class="message--error">No piece found.</p>
+      )
+    }
+  </section>
+</BaseLayout>

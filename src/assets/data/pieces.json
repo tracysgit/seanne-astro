@@ -1,15 +1,4 @@
-{
-  "SOCIAL": {
-    "email": {
-      "address": "contact@seannebuoy.art",
-      "subject": "Contact%20Seanne%20Buoy"
-    },
-    "instagram": {
-      "handle": "@milk.a.neuron",
-      "link": "https://www.instagram.com/milk.a.neuron/?hl=en"
-    }
-  },
-  "PIECES": [
+  [
     {
       "isActive": true,
       "id": 35,
@@ -461,4 +450,3 @@
         }
     }
   ]
-}
