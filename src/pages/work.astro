@@ -23,7 +23,9 @@ const pageName = 'work';
                         src={`../images/${piece.imageFiles.card}.jpg`}
                         alt=""
                       />
-                      <figcaption>{piece.name}</figcaption>
+                      <figcaption>
+                        <Fragment set:html={piece.name} />
+                      </figcaption>
                     </figure>
                   </a>
                 </li>
