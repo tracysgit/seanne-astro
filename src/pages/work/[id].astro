@@ -81,14 +81,14 @@ const metaDesc = `Learn more about the artwork called '${name}'.`;
             <figure class="image-container--single">
               <picture>
                 <source
-                  srcset={`../images/${imageFiles.card}.webp`}
+                  srcset={`/images/${imageFiles.card}.webp`}
                   type="image/webp"
                 />
                 <source
-                  srcset={`../images/${imageFiles.card}.jpg`}
+                  srcset={`/images/${imageFiles.card}.jpg`}
                   type="image/jpeg"
                 />
-                <img src={`../images/${imageFiles.card}.jpg`} alt="" />
+                <img src={`/images/${imageFiles.card}.jpg`} alt="" />
               </picture>
               {imageFiles.other &&
                 imageFiles.other.map((image) => (

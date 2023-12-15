@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const errorImageHoriz = 'psari_transparent';
+
+const title = 'Seanne Buoy | 404';
+const metaDesc = "You've reached the error page on the seannebuoy.art website";
+---
+
+<BaseLayout title={title} description={metaDesc}>
+  <section aria-label="Error page">
+    <div class="errorpage-image-wrapper">
+      <p>404 - Page Not Found</p>
+      <a href="/work">
+        <figure>
+          <img src={`/images/${errorImageHoriz}.png`} alt="" />
+          <!-- <figcaption>Bleached Black Fabric, 2023</figcaption> -->
+        </figure>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
