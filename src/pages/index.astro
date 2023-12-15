@@ -3,13 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const splashImageHoriz = './images/psari_transparent.png';
 const splashImageVert = './images/psari_transparent_rotated.png';
-const pageName = 'home';
+const title = `Seanne Buoy | Home`;
+const metaDesc = `Expressionistic artwork by Seanne Buoy in a variety of mediums.`;
 ---
 
-<BaseLayout
-  title="Seanne Buoy | Home"
-  description="Expressionistic artwork by Seanne Buoy in a variety of mediums."
->
+<BaseLayout title={title} description={metaDesc}>
   <section aria-label="Artwork by Seanne Buoy" class="splash-image-wrapper">
     <a href="/work">
       <img

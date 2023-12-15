@@ -1,18 +1,38 @@
 ---
-// import Hamburger from './Hamburger.astro';
-// const { pageName } = Astro.props;
+const currentPath = Astro.url.pathname;
 
-const linkNames = [
-  ['home', ''],
-  ['work', 'work'],
-  ['about', 'about'],
-]; //[link name, link path]
+const links = [
+  ['home', '/'],
+  ['work', '/work.html'],
+  ['about', '/about.html'],
+]; //[link name, link href]
+
+const navLink = function (linkName: string, linkHref: string) {
+  let isActive = false;
+  const activeText = ' aria-current="page" class="active"';
+
+  if (linkName === 'work' && currentPath.indexOf('work') > -1) {
+    isActive = true;
+  } else if (currentPath === linkHref) {
+    isActive = true;
+  }
+
+  return (
+    '<li><a href="' +
+    linkHref +
+    '"' +
+    (isActive ? activeText : '') +
+    '>' +
+    linkName +
+    '</a></li>'
+  );
+};
 ---
 
 <header>
   <h1 class="h1-headline">
-    <a href="/work/"
-      ><span class="visually-hidden">Artwork by</span>Seanne Buoy</a
+    <a href="./work.html"
+      ><span class="visually-hidden">Artwork by</span> Seanne Buoy</a
     >
   </h1>
   <nav class="mainnav" aria-label="Main Menu">
@@ -21,28 +41,7 @@ const linkNames = [
       ><span class="navicon"></span></label
     >
     <ul class="mainmenu">
-      <!-- {
-        linkNames.map((linkName) => {
-          if (pageName === linkName[0]) {
-            return (
-              <li>
-                <a href={`/${linkName[1]}`} aria-current="page" class="active">
-                  {linkName[0]}
-                </a>
-              </li>
-            );
-          }
-
-          return (
-            <li>
-              <a href={`/${linkName[1]}`}>{linkName[0]}</a>
-            </li>
-          );
-        })
-      } -->
-      <li><a href="/">Home</a></li>
-      <li><a href="/work/">Work</a></li>
-      <li><a href="/about/">About</a></li>
+      {links.map((link) => <Fragment set:html={navLink(link[0], link[1])} />)}
       <li>
         <a href="mailto:contact@seannebuoy.art?subject=Contact%20Seanne%20Buoy"
           >Contact</a

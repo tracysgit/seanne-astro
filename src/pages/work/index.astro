@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import pieces from '../../assets/data/pieces.json';
+
+const title = `Seanne Buoy | Work`;
+const metaDesc = `View the body of work by artist Seanne Buoy.`;
+---
+
+<BaseLayout title={title} description={metaDesc}>
+  <section aria-label="Portfolio of Artwork">
+    {
+      pieces.length ? (
+        <ul class="image-container--columns">
+          {pieces.map((piece) => {
+            if (piece.isActive) {
+              return (
+                <li id={`piece_${piece.id}`}>
+                  <a href={`/work/${piece.id}.html`} class="image-card">
+                    <figure>
+                      <picture>
+                        <source
+                          srcset={`../images/${piece.imageFiles.card}.webp`}
+                          type="image/webp"
+                        />
+                        <source
+                          srcset={`../images/${piece.imageFiles.card}.jpg`}
+                          type="image/jpeg"
+                        />
+                        <img
+                          src={`../images/${piece.imageFiles.card}.jpg`}
+                          loading="lazy"
+                          alt=""
+                        />
+                      </picture>
+                      <figcaption>
+                        <Fragment set:html={piece.name} />
+                      </figcaption>
+                    </figure>
+                  </a>
+                </li>
+              );
+            }
+          })}
+        </ul>
+      ) : (
+        <p class="message--error">No artwork is available for display.</p>
+      )
+    }
+  </section>
+</BaseLayout>

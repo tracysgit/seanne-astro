@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const imageAbout = 'the-milk-of-human-kindness_crop';
 
-const pageName = 'about';
 const title = 'Seanne Buoy | About';
 const metaDesc =
   'Learn about artist Seanne Buoy and kinesthetic synesthesia in her art.';
@@ -17,11 +16,8 @@ const metaDesc =
         alt="Art piece called The Milk of Human Kindness"
       /> -->
       <picture>
-        <source
-          src-set={`./../images/${imageAbout}.webp`}
-          alt=""
-          type="image/webp"
-        />
+        <source srcset={`./../images/${imageAbout}.webp`} type="image/webp" />
+        <source srcset={`./../images/${imageAbout}.jpg`} type="image/jpeg" />
         <img src={`./../images/${imageAbout}.jpg`} alt="" />
       </picture>
       <!-- <figcaption>Bleached Black Fabric, 2023</figcaption> -->

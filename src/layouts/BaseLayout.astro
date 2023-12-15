@@ -28,8 +28,20 @@ const { title, description } = Astro.props;
       <slot />
     </main>
     <Footer />
-    <script>
+    {
+      /*<script>
       import '../scripts/scripts.js';
+    </script>*/
+    }
+    <script is:inline>
+      'use strict';
+
+      const copyrightYear = new Date().getFullYear();
+      const copyrightYearEl = document.querySelector('#copyright-date');
+
+      if (copyrightYearEl) {
+        copyrightYearEl.innerHTML = copyrightYear;
+      }
     </script>
   </body>
 </html>
