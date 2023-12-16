@@ -3,11 +3,14 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   build: {
+    assets: 'styles',
     format: 'file',
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'never',
   },
   compressHTML: false,
   output: 'static',
-  trailingSlash: 'never',
+  // publicDir: './test',
+  site: 'https://seannebuoy.art',
+  trailingSlash: 'ignore',
 
 });

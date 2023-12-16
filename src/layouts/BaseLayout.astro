@@ -1,7 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import '../css/global.css';
+import './../assets/css/styles.css';
 
 interface Props {
   title: string;
@@ -12,12 +12,17 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  class={Astro.url.pathname === '/' ? 'background--splash' : null}
+>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- <link rel="stylesheet" href="/css/styles.css" /> -->
+    <!-- <link rel="canonical" href="https://seannebuoy.art/" /> -->
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
@@ -28,20 +33,5 @@ const { title, description } = Astro.props;
       <slot />
     </main>
     <Footer />
-    {
-      /*<script>
-      import '../scripts/scripts.js';
-    </script>*/
-    }
-    <script is:inline>
-      'use strict';
-
-      const copyrightYear = new Date().getFullYear();
-      const copyrightYearEl = document.querySelector('#copyright-date');
-
-      if (copyrightYearEl) {
-        copyrightYearEl.innerHTML = copyrightYear;
-      }
-    </script>
   </body>
 </html>

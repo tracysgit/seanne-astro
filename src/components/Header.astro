@@ -3,8 +3,8 @@ const currentPath = Astro.url.pathname;
 
 const links = [
   ['home', '/'],
-  ['work', '/work.html'],
-  ['about', '/about.html'],
+  ['work', '/work'],
+  ['about', '/about'],
 ]; //[link name, link href]
 
 const navLink = function (linkName: string, linkHref: string) {
@@ -31,7 +31,7 @@ const navLink = function (linkName: string, linkHref: string) {
 
 <header>
   <h1 class="h1-headline">
-    <a href="./work.html"
+    <a href="/work"
       ><span class="visually-hidden">Artwork by</span> Seanne Buoy</a
     >
   </h1>

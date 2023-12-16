@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const imageAbout = 'the-milk-of-human-kindness_crop';
+const imageAbout = './images/the-milk-of-human-kindness_crop';
 
 const title = 'Seanne Buoy | About';
 const metaDesc =
@@ -12,9 +12,9 @@ const metaDesc =
   <section aria-labelledby="headline--about">
     <figure class="image-container--marquee">
       <picture>
-        <source srcset={`/images/${imageAbout}.webp`} type="image/webp" />
-        <source srcset={`/images/${imageAbout}.jpg`} type="image/jpeg" />
-        <img src={`/images/${imageAbout}.jpg`} alt="" />
+        <source srcset={`${imageAbout}.webp`} type="image/webp" />
+        <source srcset={`${imageAbout}.jpg`} type="image/jpeg" />
+        <img src={`${imageAbout}.jpg`} alt="" />
       </picture>
       <!-- <figcaption>Bleached Black Fabric, 2023</figcaption> -->
     </figure>

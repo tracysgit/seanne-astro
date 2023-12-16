@@ -1,7 +1,17 @@
 ---
-//The scripts.js file will automatically update the copyright year with the current year.
+
 ---
 
 <footer>
-  <p>&copy;<span id="copyright-date">XXXX</span> Seanne Buoy</p>
+  <p>&copy;<span id="copyright-date">2024</span> Seanne Buoy</p>
 </footer>
+<script is:inline>
+  'use strict';
+
+  const copyrightYear = new Date().getFullYear();
+  const copyrightYearEl = document.querySelector('#copyright-date');
+
+  if (copyrightYearEl) {
+    copyrightYearEl.innerHTML = copyrightYear;
+  }
+</script>

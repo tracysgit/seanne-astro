@@ -52,6 +52,7 @@ const {
 
 const title = `Seanne Buoy | ${name}`;
 const metaDesc = `Learn more about the artwork called '${name}'.`;
+const imagePath = './../images/';
 ---
 
 <BaseLayout title={title} description={metaDesc}>
@@ -64,7 +65,7 @@ const metaDesc = `Learn more about the artwork called '${name}'.`;
               <Fragment set:html={name} />
               {yearCreated && `(${yearCreated})`}
             </h2>
-            <a href="/work.html" class="button--back">
+            <a href="./../work" class="button--back">
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -81,28 +82,28 @@ const metaDesc = `Learn more about the artwork called '${name}'.`;
             <figure class="image-container--single">
               <picture>
                 <source
-                  srcset={`/images/${imageFiles.card}.webp`}
+                  srcset={`${imagePath}${imageFiles.card}.webp`}
                   type="image/webp"
                 />
                 <source
-                  srcset={`/images/${imageFiles.card}.jpg`}
+                  srcset={`${imagePath}${imageFiles.card}.jpg`}
                   type="image/jpeg"
                 />
-                <img src={`/images/${imageFiles.card}.jpg`} alt="" />
+                <img src={`${imagePath}${imageFiles.card}.jpg`} alt="" />
               </picture>
               {imageFiles.other &&
                 imageFiles.other.map((image) => (
                   <picture>
                     <source
-                      srcset={`../images/${image}.webp`}
+                      srcset={`${imagePath}${image}.webp`}
                       type="image/webp"
                     />
                     <source
-                      srcset={`../images/${image}.jpeg`}
+                      srcset={`${imagePath}${image}.jpeg`}
                       type="image/jpeg"
                     />
                     <img
-                      src={`../images/${image}.jpg`}
+                      src={`${imagePath}${image}.jpg`}
                       alt=""
                       style={{ marginTop: '10px' }}
                     />

@@ -15,8 +15,8 @@ All commands are run from the root of the project, from a terminal:
 
 ## Installation
 
-- Make sure your Node version is 18.14.1 or newer
-- cd to the directory and "npm install"
+- Make sure your Node version is 18.14.1 or newer ("node -v")
+- cd to the correct directory and "npm install"
 - "npm run dev" 
 - When ready to generate files for the web: "npm run build"
 - Push modified files to the web server

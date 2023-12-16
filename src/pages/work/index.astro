@@ -4,6 +4,7 @@ import pieces from '../../assets/data/pieces.json';
 
 const title = `Seanne Buoy | Work`;
 const metaDesc = `View the body of work by artist Seanne Buoy.`;
+const imagePath = './images/';
 ---
 
 <BaseLayout title={title} description={metaDesc}>
@@ -15,19 +16,19 @@ const metaDesc = `View the body of work by artist Seanne Buoy.`;
             if (piece.isActive) {
               return (
                 <li id={`piece_${piece.id}`}>
-                  <a href={`/work/${piece.id}.html`} class="image-card">
+                  <a href={`/work/${piece.id}`} class="image-card">
                     <figure>
                       <picture>
                         <source
-                          srcset={`/images/${piece.imageFiles.card}.webp`}
+                          srcset={`${imagePath}${piece.imageFiles.card}.webp`}
                           type="image/webp"
                         />
                         <source
-                          srcset={`/images/${piece.imageFiles.card}.jpg`}
+                          srcset={`${imagePath}${piece.imageFiles.card}.jpg`}
                           type="image/jpeg"
                         />
                         <img
-                          src={`/images/${piece.imageFiles.card}.jpg`}
+                          src={`${imagePath}${piece.imageFiles.card}.jpg`}
                           loading="lazy"
                           alt=""
                         />

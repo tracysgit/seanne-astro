@@ -248,7 +248,7 @@ header {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     padding: 0;
 }
 
@@ -300,8 +300,8 @@ header {
     text-align: center;
     max-height: 0;
     transition: max-height .2s ease-out;
-    margin: 20px 0;
-    padding: 0;
+    margin: 5px 0;
+    padding: 10px 0;
 }
 
 .mainnav .mainmenu li {
@@ -318,7 +318,7 @@ header {
     text-decoration: none;
     cursor: pointer;
     margin: 0 5px;
-    padding: 10px 8px 8px;
+    padding: 12px 8px 8px;
 }
 
 .mainnav .mainmenu a:hover,
@@ -345,7 +345,7 @@ header {
 .mainnav .mainmenu-icon {
     cursor: pointer;
     display: inline-block;
-    padding: 28px 20px;
+    padding: 25px 15px;
     position: relative;
     user-select: none;
 }
@@ -356,7 +356,7 @@ header {
     height: 3px;
     position: relative;
     transition: background .2s ease-out;
-    width: 25px;
+    width: 35px;
 }
 
 .mainnav .mainmenu-icon .navicon:before,
@@ -371,11 +371,11 @@ header {
 }
 
 .mainnav .mainmenu-icon .navicon:before {
-    top: 8px;
+    top: 10px;
 }
 
 .mainnav .mainmenu-icon .navicon:after {
-    top: -8px;
+    top: -10px;
 }
 
 .mainnav .mainmenu-btn {
@@ -415,121 +415,17 @@ header {
     .mainnav .mainmenu {
         clear: none;
         max-height: none;
-        margin: 10px 0;
+        margin: 3px 0;
     }
 
     .mainnav .mainmenu a {
-        padding: 10px 15px 8px;
+        padding: 12px 15px 8px;
     }
 
     .mainnav .mainmenu-icon {
         display: none;
     }
 } 
-
-/* Main Nav and Hamburger styles */
-/*.hamburger {
-    text-align: center;
-    cursor: pointer;
-    margin: 15px auto 10px;
-}
-
-.hamburger .line {
-    display: block;
-    width: 35px;
-    height: 3px;
-    margin-bottom: 8px;
-    background-color: var(--color-gray-darker);
-}
-
-.mainnav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.mainnav-links {
-    list-style-type: "";
-    overflow: hidden;
-    text-align: center;
-    display: none;
-    margin: 0;
-    padding: 0;
-}
-
-.mainnav .mainnav-links li {
-    display: inline-block;
-    text-align: center;
-    font-size: 1em;
-}
-
-.mainnav-links a {
-    display: block;
-    line-height: 1;
-    color: var(--color-gray-darker);
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 10px 5px;
-    padding: 10px 3px 8px;
-}
-
-.mainnav .mainnav-links a:hover {
-    text-decoration: underline;
-}
-
-.mainnav .mainnav-links a:visited {
-    text-decoration: none;
-}
-
-.mainnav .mainnav-links a:focus-visible {
-    outline: 2px solid var(--color-focus-ring-blue);
-}
-
-.mainnav .mainnav-links a:focus:not(:focus-visible) {
-    outline: none;
-}
-
-.mainnav .mainnav-links a.active {
-    text-decoration: underline;
-}
-
-.mainnav-expanded {
-    display: unset;
-} */
-
-/* @media screen and (min-width: 636px) { */
-/* @media screen and (min-width: 48em) { */
-    /* .mainnav li a {
-        padding: 20px 30px;
-    }
-
-    .mainnav .mainmenu {
-        clear: none;
-        max-height: none;
-    }
-
-    .mainnav .mainmenu a {
-        padding: 10px 15px 8px;
-    } */
-    /* .mainnav-links {
-        margin-left: 5em;
-        display: block;
-        position: static;
-        width: auto;
-        background: none;
-    } */
-
-    /* .mainnav-links a {
-        padding: 10px 15px 8px;
-    }
-
-    .hamburger {
-        display: none;
-    } */
-/* } */
-
 
 /* START - Image Container Styles */
 /*---------------------------------------*/
@@ -538,10 +434,10 @@ header {
 }
 
 /* Splash Image */
-/* .background--splash {
+.background--splash {
     height: auto;
     width: 100%;
-    background-image: url("images/background_paper4.jpg");
+    background-image: url("../images/background_paper4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -553,7 +449,7 @@ header {
     .background--splash {
         background-image: none;
     }
-} */
+}
 
 .splash-image-wrapper {
     display: flex;
