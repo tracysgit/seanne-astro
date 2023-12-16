@@ -1,4 +1,7 @@
-# Seanne's Art Website Built in Astro
+# Welcome 
+
+- This is an Astro version of the static website at https://seannebuoy.art.
+- To rehydrate this app, run "npm install" and then "npm run dev".
 
 ## 🧞 Commands
 
