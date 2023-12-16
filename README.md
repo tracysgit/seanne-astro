@@ -1,4 +1,4 @@
-# Seanne's Artwork Website Built in Astro
+# Seanne's Art Website Built in Astro
 
 ## 🧞 Commands
 
@@ -15,14 +15,14 @@ All commands are run from the root of the project, from a terminal:
 
 ## Installation
 
-- Make sure your Node version is new enough
-- "npm create astro@latest" and cd to folder -OR- "npm install"
+- Make sure your Node version is 18.14.1 or newer
+- "npm create astro@latest" and cd to folder 
 - "npm run dev" 
-- "npm run astro preferences disable devToolbar"
+- To disable the toolbar: "npm run astro preferences disable devToolbar"
 
 ## Making Edits
 
-- Make sure your Node version is new enough
-- "npm run dev"
-- "npm run build"  when ready to generate files for the web
+- Make sure your Node version is 18.14.1 or newer
+- To spin up the website: "npm run dev"
+- When ready to generate files for the web: "npm run build"
 - Push files to the web server
