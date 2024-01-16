@@ -3,6 +3,24 @@
 - This is an Astro version of the static website at https://seannebuoy.art.
 - To rehydrate this app, run "npm install" and then "npm run dev".
 
+## Features
+
+- Built with Astro
+- Parameterized routing (work/pieceId)
+- Static JSON data file of artwork for easy maintenance
+- Unique <head></head> content on each page
+- Built with accessibility in mind (color contrast, aria attributes, focus rings, headline hierarchy, etc.)
+- Uses webp and jpg images
+- Renders in light mode or dark mode
+      
+## Future Improvements
+
+- Improve accessibility of mobile menu 
+- Add JSON data to a database        
+- Add data loader
+- Provide pages to add and edit artwork online 
+- Image compression/optimizer or lazy load   
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -23,7 +41,4 @@ All commands are run from the root of the project, from a terminal:
 - "npm run dev" 
 - When ready to generate files for the web: "npm run build"
 - Push modified files to the web server
-
-## Other
-
 - To disable the toolbar: "npm run astro preferences disable devToolbar"
